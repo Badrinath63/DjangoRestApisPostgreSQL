@@ -5,6 +5,9 @@ from .models import Item
 from .serializers import ItemSerializer
 
 class ItemDetailView(APIView):
+    """
+    Defect Comment
+    """
     def get_object(self, pk):
         try:
             return Item.objects.get(pk=pk)
