@@ -6,7 +6,7 @@ from .serializers import ItemSerializer
 
 class ItemDetailView(APIView):
     """
-    Defect Comment
+    Defect Comment 
     """
     def get_object(self, pk):
         try:
