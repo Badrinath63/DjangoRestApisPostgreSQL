@@ -6,7 +6,7 @@ from .serializers import ItemSerializer
 
 class ItemDetailView(APIView):
     """
-    Defect Comment 
+    Defect Comment
     """
     def get_object(self, pk):
         try:
@@ -30,6 +30,9 @@ class ItemDetailView(APIView):
         return Response(item_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def put(self, request, pk):
+        """
+        Update Code
+        """
         item = self.get_object(pk)
         if item is None:
             return Response({'error': 'Item not found'}, status=status.HTTP_404_NOT_FOUND)
